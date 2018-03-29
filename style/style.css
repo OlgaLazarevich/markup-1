@@ -418,7 +418,7 @@ h2 {
 }
 
 .section-order section {
-    background: red;
+    
     height: 507px;
     width: 1170px;
     margin: auto;
@@ -434,12 +434,76 @@ h2 {
 .section-order article {
     width: 430px;
     height: 507px;
-    background: #806363;
+    
     float: right;
     margin: 0px 110px 0px 0px;
     overflow-y: auto;
     text-align: center;
+    position: relative;
+
+
 }
+
+.section-order h2 {
+    position: relative;
+    color: #cc9900;
+    margin-bottom: 70px;
+}
+
+.section-order h2:after {
+    content: '';
+    width: 230px;
+    height: 50px;
+    background: url(..//img/decor-gold-min.png) no-repeat 100%;
+    position: absolute;
+    left: 110px;
+    top: 40px;
+}
+
+.section-order p {
+    color: #4c4c4c;
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 200px;
+    height: 36px;
+    border: 1px #c8c6c6 solid;
+    position: relative;
+}
+
+.section-order form p {
+    float: left;
+    text-align: left;
+    color: #cc9900;
+}
+
+.section-order form {
+    margin-top: 30px;
+}
+
+.section-order form p:nth-of-type(even) {
+    margin-left: 30px;
+}
+
+.section-order input[type="submit"] {
+    
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 115px;
+    width: 200px;
+    height: 36px;
+    background: #cc9900;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: Open-sans, sans-serif;
+}
+
 
 footer {
     width: 320px;
