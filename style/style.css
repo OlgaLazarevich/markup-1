@@ -13,6 +13,18 @@
     src: url("../fonts/Lato-Regular.ttf") format('truetype');
 }
 
+@font-face {
+    font-family: OSi;
+    src: url("../fonts/OpenSans-Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: OSr;
+    src: url("../fonts/OpenSans-Regular.ttf") format('truetype');
+}
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -28,6 +40,12 @@ body {
 h2 {
     font-family: Yeseva;
     font-size: 36px;
+}
+
+.wrapper {
+    width: 1250px;
+    min-height: 200px;
+    margin: auto;
 }
 
 
@@ -255,6 +273,7 @@ h2 {
 .section-menu {
     height: 994px;
     padding: 100px 40px;
+    background-image: url(/img/bg-white-2.jpg);
 }
 
 .section-menu section {
@@ -418,7 +437,7 @@ h2 {
 }
 
 .section-order section {
-    
+
     height: 507px;
     width: 1170px;
     margin: auto;
@@ -434,7 +453,7 @@ h2 {
 .section-order article {
     width: 430px;
     height: 507px;
-    
+
     float: right;
     margin: 0px 110px 0px 0px;
     overflow-y: auto;
@@ -473,6 +492,11 @@ h2 {
     height: 36px;
     border: 1px #c8c6c6 solid;
     position: relative;
+    padding: 5px 5px 5px 10px;
+    font-size: 16px;
+    color: #7c7c7c;
+    font-family: OSi;
+    position: relative;
 }
 
 .section-order form p {
@@ -490,7 +514,7 @@ h2 {
 }
 
 .section-order input[type="submit"] {
-    
+
     display: block;
     position: absolute;
     bottom: 0px;
@@ -501,23 +525,50 @@ h2 {
     border: none;
     color: white;
     font-size: 16px;
-    font-family: Open-sans, sans-serif;
+    font-family: OSr, sans-serif;
+}
+
+.section-order input:after {
+    content: '';
+    width: 30px;
+    height: 20px;
+    background: red;
+    background: url(/img/srite.png);
+    background-position: 110px 16px;
+
+
+    left: 300px;
+    top: 45px;
+}
+
+.form-wrapper {
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 
 footer {
     width: 320px;
+    min-height: 320px;
     background: #191919;
     margin: auto;
     width: 100%;
     position: relative;
     bottom: 0px;
+    overflow: hidden;
 }
 
-.wrapper {
-    width: 1250px;
-    min-height: 200px;
-    height: auto;
-    /*    border: 1px solid red;*/
-    margin: auto;
+.footer-section {
+    min-height: 218px;
+    width: 370px;
+    background: red;
+    float: left;
+    margin: 52px 15px;
+    padding: 10px;
+    text-align: center;
 }
+
+footer .wrapper { padding: 0px 25px;}
+
