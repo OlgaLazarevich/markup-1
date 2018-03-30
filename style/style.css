@@ -23,7 +23,10 @@
     src: url("../fonts/OpenSans-Regular.ttf") format('truetype');
 }
 
-
+@font-face {
+    font-family: OSb;
+    src: url("../fonts/OpenSans-Bold.ttf") format('truetype');
+}
 
 * {
     box-sizing: border-box;
@@ -437,7 +440,6 @@ h2 {
 }
 
 .section-order section {
-
     height: 507px;
     width: 1170px;
     margin: auto;
@@ -453,14 +455,11 @@ h2 {
 .section-order article {
     width: 430px;
     height: 507px;
-
     float: right;
     margin: 0px 110px 0px 0px;
     overflow-y: auto;
     text-align: center;
     position: relative;
-
-
 }
 
 .section-order h2 {
@@ -514,7 +513,6 @@ h2 {
 }
 
 .section-order input[type="submit"] {
-
     display: block;
     position: absolute;
     bottom: 0px;
@@ -535,8 +533,6 @@ h2 {
     background: red;
     background: url(/img/srite.png);
     background-position: 110px 16px;
-
-
     left: 300px;
     top: 45px;
 }
@@ -547,7 +543,6 @@ h2 {
     overflow: hidden;
     margin-bottom: 20px;
 }
-
 
 footer {
     width: 320px;
@@ -563,12 +558,111 @@ footer {
 .footer-section {
     min-height: 218px;
     width: 370px;
-    background: red;
     float: left;
     margin: 52px 15px;
-    padding: 10px;
+    padding: 7px 10px;
     text-align: center;
+    color: white;
+    position: relative;
 }
 
-footer .wrapper { padding: 0px 25px;}
+.footer-section h4 {
+    font-family: Yeseva;
+    font-size: 21px;
+    margin-bottom: 60px;
+}
 
+.footer-section h4:after {
+    content: '';
+    width: 230px;
+    height: 50px;
+    background: url(..//img/decor.png) no-repeat 100%;
+    position: absolute;
+    left: 55px;
+    top: 30px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    font-family: OSr, sans-serif;
+    line-height: 1.3;
+}
+
+.footer-section p strong {
+    font-size: 16px;
+    font-family: OSb, sans-serif;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.footer-section .links li,
+.footer-section .links2 li {
+    display: inline-block;
+}
+
+.footer-section ul {
+    margin-top: 50px;
+}
+
+.footer-section .links a,
+.footer-section .links2 a {
+    display: inline-block;
+    height: 14px;
+    width: 21px;
+}
+
+.footer-section .links2 a {
+    height: 15px;
+    width: 15px;
+}
+
+.links a.link1 {
+    background: url(/img/srite.png);
+    background-position: 0px 15px;
+}
+
+.links a.link2 {
+    background: url(/img/srite.png);
+    background-position: -35px 15px;
+    margin-left: 12px;
+}
+
+.links a.link3 {
+    background: url(/img/srite.png);
+    background-position: -67px 15px;
+    margin-left: 12px;
+}
+
+.links a.link4 {
+    background: url(/img/srite.png);
+    background-position: -100px 15px;
+    margin-left: 12px;
+}
+
+.links2 a.link1 {
+    background: url(/img/srite.png);
+    background-position: -130px 17px;
+    margin-left: 12px;
+}
+
+.links2 a.link2 {
+    background: url(/img/srite.png);
+    background-position: -150px 16px;
+    margin-left: 12px;
+}
+
+.links2 a.link3 {
+    background: url(/img/srite.png);
+    background-position: -177px 17px;
+    margin-left: 12px;
+}
+
+.links2 a.link4 {
+    background: url(/img/srite.png);
+    background-position: -204px 17px;
+    margin-left: 12px;
+}
+
+footer .wrapper {
+    padding: 0px 25px;
+}
