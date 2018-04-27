@@ -45,50 +45,55 @@ h2 {
     font-size: 36px;
 }
 
+a,
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+*::selection {
+    color: #cc9900;
+    background: #191919;
+}
+
+a,
+button,
+form,
+form p,
+input,
+img,
+.nav-button {
+    user-select: none;
+}
+
+img::selection {
+    background: #cc9900;
+}
+
 .wrapper {
     width: 1250px;
     min-height: 200px;
     margin: auto;
+    position: relative;
 }
 
 
-/* header */
+/* introduce */
 
-.header {
-    height: 750px;
+.introduce {
+    min-height: 750px;
+    background: #191919;
     background: url(..//img/bg1.jpg) no-repeat center 0;
     background-size: cover;
     color: #f3f3f3;
     box-shadow: 0px 100px 100px 0px rgba(0, 0, 0, 0.5) inset;
 }
 
-.header h1 {
-    font-size: 90px;
-    font-family: Yeseva;
-    display: block;
-    width: 960px;
-    margin: auto;
-    text-align: center;
-    padding: 130px 0px 130px 0px;
-    position: relative;
-}
-
-.header h1:after {
-    content: '';
-    width: 230px;
-    height: 50px;
-    background: red;
-    background: url(..//img/decor-main.png) no-repeat 100%;
-    position: absolute;
-    left: 370px;
-    bottom: 40px;
-}
-
-.header nav {
+.introduce nav {
     height: 118px;
 }
 
-.header ul li {
+.introduce ul.menu li {
     display: inline-block;
     float: left;
     font-size: 21px;
@@ -100,23 +105,50 @@ h2 {
     font-family: GenBkBasB;
 }
 
-.header ul li:first-child {
+.introduce ul.menu li:first-child {
     border-top: 5px solid #f3f3f3;
 }
 
-.header ul li:hover {
+.introduce ul.menu li:hover {
     border-top: 5px solid #f3f3f3;
-    cursor: pointer;
 }
 
-.header a {
-    display: inline-block;
-    float: left;
+.introduce .menu a {
     color: #f3f3f3;
     text-decoration: none;
-    font-size: 36px;
+}
+
+.introduce a.logo {
+    display: inline-block;
+    float: left;
+    background: red;
+    background: url(..//img/logo.png) no-repeat center 0;
+    width: 156px;
+    height: 26px;
     margin: 40px 180px 0px 5px;
     font-family: Yeseva;
+}
+
+.introduce h1 {
+    font-size: 90px;
+    font-family: Yeseva;
+    display: block;
+    width: 960px;
+    margin: auto;
+    text-align: center;
+    padding: 130px 0px 130px 0px;
+    position: relative;
+}
+
+.introduce h1:after {
+    content: '';
+    width: 230px;
+    height: 50px;
+    background: red;
+    background: url(..//img/decor-main.png) no-repeat 100%;
+    position: absolute;
+    left: 370px;
+    bottom: 40px;
 }
 
 .nav-button {
@@ -125,13 +157,13 @@ h2 {
     text-align: center;
 }
 
-.header button {
+.introduce button {
     border: none;
     font-size: 18px;
     height: 60px;
     width: 227px;
     color: #f3f3f3;
-    cursor: pointer;
+    margin-bottom: 120px;
 }
 
 .but-1 {
@@ -142,14 +174,55 @@ h2 {
     background: rgba(256, 256, 256, .4);
 }
 
-.header button.but-2 {
+.introduce button.but-2 {
     border: 1px solid white;
 }
 
-.header button:hover {
+.introduce button:hover {
     background: rgba(256, 256, 256, .4);
     border: 1px solid white;
 }
+
+.social {
+    height: 110px;
+    float: left;
+}
+
+.social {
+    margin-left: 21px;
+}
+
+.social ul li {
+    display: inline-block;
+}
+
+.social ul a {
+    display: inline-block;
+    background: green;
+    height: 21px;
+    width: 17px;
+    float: left;
+    margin: 50px 19px 0px 0px;
+    overflow: hidden;
+}
+
+.social .soc1 {
+    background: url(..//img/srite.png);
+    background-position: -245px 20px;
+}
+
+.social .soc2 {
+    background: url(..//img/srite.png);
+    background-position: -282px 20px;
+}
+
+.social .soc3 {
+    background: url(..//img/srite.png);
+    background-position: -308px 21px;
+    margin-left: -8px;
+    width: 16px;
+}
+
 
 
 /* 2 */
@@ -164,7 +237,7 @@ h2 {
     margin: 100px 0px 0px 100px;
     text-align: center;
     float: left;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .section-justfood h2 {
@@ -192,7 +265,7 @@ h2 {
 }
 
 .section-justfood img[alt="cook"] {
-    margin: 50px 0px 0px 100px;
+    margin: 50px 0px 00px 100px;
 }
 
 .section-justfood img[alt="plate"] {
@@ -204,6 +277,7 @@ h2 {
 
 .section-ingredient {
     height: 760px;
+    background: #191919;
     background: url(..//img/bg2.jpg) no-repeat center 0;
     background-size: cover;
 }
@@ -214,7 +288,7 @@ h2 {
     width: 570px;
     height: 557px;
     float: right;
-    overflow: hidden;
+    overflow-y: auto;
     margin: 100px 40px 0px 0px;
     text-align: center;
 }
@@ -276,7 +350,7 @@ h2 {
 .section-menu {
     height: 994px;
     padding: 100px 40px;
-    background-image: url(/img/bg-white-2.jpg);
+    background-image: url(..//img/bg-white-2.jpg);
 }
 
 .section-menu section {
@@ -374,6 +448,7 @@ h2 {
 
 .section-guest {
     height: 760px;
+    background: #191919;
     background: url(..//img/bg3.jpg) no-repeat center 0;
     background-size: cover;
 }
@@ -389,6 +464,7 @@ h2 {
     position: relative;
     overflow: hidden;
     padding: 0px 70px;
+    overflow-y: auto;
 }
 
 .section-guest h2 {
@@ -430,17 +506,18 @@ h2 {
     font-size: 18px;
     font-family: Lato, sans-serif;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
 /* 5 */
 
 .section-order {
-    height: 710px;
+    min-height: 710px;
 }
 
 .section-order section {
-    height: 507px;
+    min-height: 507px;
     width: 1170px;
     margin: auto;
     position: relative;
@@ -454,10 +531,9 @@ h2 {
 
 .section-order article {
     width: 430px;
-    height: 507px;
+    min-height: 507px;
     float: right;
-    margin: 0px 110px 0px 0px;
-    overflow-y: auto;
+    margin: 0px 110px 100px 0px;
     text-align: center;
     position: relative;
 }
@@ -498,6 +574,14 @@ h2 {
     position: relative;
 }
 
+.form-wrapper {
+    height: 60px;
+    width: 430px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: block;
+}
+
 .section-order form p {
     float: left;
     text-align: left;
@@ -505,7 +589,8 @@ h2 {
 }
 
 .section-order form {
-    margin-top: 30px;
+    margin: 30px 0px 50px 0px;
+    display: block;
 }
 
 .section-order form p:nth-of-type(even) {
@@ -514,9 +599,9 @@ h2 {
 
 .section-order input[type="submit"] {
     display: block;
-    position: absolute;
+    position: relative;
     bottom: 0px;
-    right: 115px;
+    right: -100px;
     width: 200px;
     height: 36px;
     background: #cc9900;
@@ -526,22 +611,16 @@ h2 {
     font-family: OSr, sans-serif;
 }
 
+
 .section-order input:after {
     content: '';
     width: 30px;
     height: 20px;
     background: red;
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: 110px 16px;
     left: 300px;
     top: 45px;
-}
-
-.form-wrapper {
-    height: 60px;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 20px;
 }
 
 footer {
@@ -617,48 +696,48 @@ footer {
 }
 
 .links a.link1 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: 0px 15px;
 }
 
 .links a.link2 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -35px 15px;
     margin-left: 12px;
 }
 
 .links a.link3 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -67px 15px;
     margin-left: 12px;
 }
 
 .links a.link4 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -100px 15px;
     margin-left: 12px;
 }
 
 .links2 a.link1 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -130px 17px;
     margin-left: 12px;
 }
 
 .links2 a.link2 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -150px 16px;
     margin-left: 12px;
 }
 
 .links2 a.link3 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -177px 17px;
     margin-left: 12px;
 }
 
 .links2 a.link4 {
-    background: url(/img/srite.png);
+    background: url(..//img/srite.png);
     background-position: -204px 17px;
     margin-left: 12px;
 }
